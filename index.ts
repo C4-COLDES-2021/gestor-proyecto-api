@@ -1,7 +1,11 @@
-import conectarBD from "./db/db";
+import conectarBD from './db/db';
+import {UsuarioModel} from './models/usuario';
+
+
 
 const main = async () => {
-await conectarBD();
+    await conectarBD();
+   
 };
 
 main();
