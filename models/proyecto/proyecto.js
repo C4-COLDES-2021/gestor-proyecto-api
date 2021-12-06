@@ -1,8 +1,10 @@
 
-import { Schema, model } from 'mongoose';
-import { UsuarioModel } from './usuario';
-import { EstadoProyectoModel } from './estado_proyecto';
-import { FaseProyectoModel } from './fase_proyecto';
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
+
+import { EstadoProyectoModel } from '../estado_proyecto/estado_proyecto.js';
+import { FaseProyectoModel } from '../fase_proyecto/fase_proyecto.js';
+import { UsuarioModel } from '../usuario/usuario.js';
 
 
 // import { Enum_EstadoProyecto, Enum_FaseProyecto, Enum_TipoObjetivo } from '../enums/enums.js';

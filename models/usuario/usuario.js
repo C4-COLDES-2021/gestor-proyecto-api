@@ -1,5 +1,7 @@
-import { Schema, model } from 'mongoose';
-import { RolModel } from './rol';
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
+
+import { RolModel } from '../rol/rol.js';
 
 const usuarioSchema = new Schema({
   correo: {
@@ -37,6 +39,7 @@ const usuarioSchema = new Schema({
   },
   estado: {
     type: String,
+    enum: ['PENDIENTE', 'AUTORIZADO', 'NO_AUTORIZADO'],
     default: 'PENDIENTE',
   },
 });

@@ -1,6 +1,9 @@
-import { Schema, model } from 'mongoose';
-import { TipoObjetivoModel } from './tipo_objetivo';
-import { ProjectoModel } from './proyecto';
+
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
+
+import { TipoObjetivoModel } from '../tipo_objetivo/tipo_objetivo.js';
+import { ProjectoModel } from '../proyecto/proyecto.js';
 
 
 // import { ProjectModel } from './proyecto/proyecto.js';
@@ -30,6 +33,6 @@ const ObjectivoSchema = new Schema({
   },
 });
 
-const ObjectivoModel = model('Proyectos_Objetivos', ObjectivoSchema, "proyectos_objetivos");
+const ObjectivoModel = model('Objetivo', ObjectivoSchema, "proyectos_objetivos");
 
 export { ObjectivoModel };

@@ -1,4 +1,6 @@
-import { Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
+
 
 const RolSchema = new Schema({
     descripcion: {
@@ -7,6 +9,6 @@ const RolSchema = new Schema({
       },
 });
 
-const RolModel = model('Proyectos_Objetivos', RolSchema, "roles");
+const RolModel = model('Rol', RolSchema, "roles");
 
 export {RolModel};

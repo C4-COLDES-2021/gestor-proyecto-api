@@ -1,7 +1,9 @@
-import { Schema, model } from 'mongoose';
-import { ProjectoModel } from './proyecto';
-import { UsuarioModel } from './usuario';
-import { EstadoInscripcionModel } from './estado_inscripcion';
+
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
+
+import { UsuarioModel } from '../usuario/usuario.js';
+import { EstadoInscripcionModel } from '../estado_inscripcion/estado_inscripcion.js';
 
 const InscripcionSchema = new Schema({
     fecha_ingreso: {
@@ -35,6 +37,6 @@ const InscripcionSchema = new Schema({
 
 });
 
-const InscripcionModel = model('Fase', InscripcionSchema, "inscripciones");
+const InscripcionModel = model('Inscripcion', InscripcionSchema, "inscripciones");
 
 export { InscripcionModel };
